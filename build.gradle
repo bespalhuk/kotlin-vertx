@@ -1,0 +1,42 @@
+buildscript {
+
+    ext {
+        kotlin_version = '1.3.61'
+        libraries = [
+                kotlin_jdk8 : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+        ]
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+subprojects {
+    apply plugin: 'kotlin'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            sourceCompatibility = "12"
+            targetCompatibility = "12"
+        }
+
+        compileKotlin {
+            kotlinOptions.jvmTarget = "12"
+        }
+
+        compileTestKotlin {
+            kotlinOptions.jvmTarget = "12"
+        }
+    }
+}

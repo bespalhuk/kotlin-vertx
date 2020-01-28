@@ -1,0 +1,7 @@
+dependencies {
+    implementation(
+            project(":layer-domain")
+    )
+    implementation libraries.kotlin_jdk8
+    implementation "org.json:json:20190722"
+}

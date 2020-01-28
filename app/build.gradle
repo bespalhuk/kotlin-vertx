@@ -1,0 +1,18 @@
+ext {
+    vertx_version = '4.0.0-milestone4'
+    koin_version= "2.0.1"
+}
+
+dependencies {
+    implementation(
+            project(":layer-data"),
+            project(":layer-domain"),
+            project(":layer-presentation")
+    )
+    implementation libraries.kotlin_jdk8
+    implementation "io.vertx:vertx-core:$vertx_version"
+    implementation "io.vertx:vertx-web:$vertx_version"
+    implementation "io.vertx:vertx-lang-kotlin:$vertx_version"
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.json:json:20190722"
+}

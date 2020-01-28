@@ -1,0 +1,5 @@
+rootProject.name = 'kotlin-vertx'
+include 'app'
+include 'layer-data'
+include 'layer-domain'
+include 'layer-presentation'

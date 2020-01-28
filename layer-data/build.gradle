@@ -1,0 +1,6 @@
+dependencies {
+    implementation(
+            project(":layer-domain")
+    )
+    implementation libraries.kotlin_jdk8
+}

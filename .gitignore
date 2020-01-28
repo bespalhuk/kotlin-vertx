@@ -1,0 +1,10 @@
+# IntelliJ Idea
+.idea/
+
+# Gradle
+.gradle
+build/
+
+# Project
+app/build
+layer-*/build
